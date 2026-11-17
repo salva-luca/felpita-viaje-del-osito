@@ -88,7 +88,7 @@ header{padding-block:clamp(36px,6vw,72px) 0}
 .rules p{color:var(--muted)}
 @media (max-width:760px){.rules{grid-template-columns:1fr}}
 .route{display:grid;gap:10px}
-.route-bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--warm) 0%,#B98C5E 45%,#8E97A8 62%,var(--cold) 82%,#BFD3EE 100%)}
+.route-bar{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--warm) 0%,#C98F4E 45%,#B5604A 62%,var(--cold) 80%,#BFD3EE 100%)}
 .route ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .route li{font-size:.86rem;line-height:1.3;display:grid;gap:2px;min-width:0}
 .route li small{font:400 .7rem/1.3 var(--mono);color:var(--muted)}
@@ -118,6 +118,8 @@ header{padding-block:clamp(36px,6vw,72px) 0}
 .toggle button{font:500 .8rem/1 var(--mono);padding:10px 14px;border:0;background:transparent;color:var(--muted);cursor:pointer}
 .toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .toggle button:focus-visible{outline:2px solid var(--cold);outline-offset:-2px}
+.change{font-size:.92rem;max-width:70ch;padding:12px 14px;border-radius:5px;background:var(--chip)}
+.change b{font:500 .7rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cold);margin-right:8px}
 .note{font-size:.92rem;color:var(--muted);max-width:70ch}
 .note b{color:var(--ink)}
 .frames{display:grid;gap:40px}
@@ -154,7 +156,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
 
 <header>
   <div class="wrap hero">
-    <p class="eyebrow">Comercial navideño · Mundana × Felpita · Documento de trabajo v1 · 17/11/2026</p>
+    <p class="eyebrow">Comercial navideño · Mundana × Felpita · Documento de trabajo v2 · 17/11/2026</p>
     <h1><span>Felpita</span>El viaje del Osito</h1>
     <p class="logline">Una Navidad, un osito emprende un viaje extraordinario para estar cerca de su abuela.</p>
     <div class="specs">
@@ -163,7 +165,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
       <div><span class="eyebrow">Formato</span><b class="pend">9:16 o 16:9, a definir</b></div>
       <div><span class="eyebrow">Estructura</span><b>8 key frames · 18 a 22 planos</b></div>
     </div>
-    <div class="hero-img"><img src="img/kf-06.jpg" alt="Felpita camina por la nieve hacia una cabaña iluminada en el Polo Norte"></div>
+    <div class="hero-img"><img src="img/kf-05.jpg" alt="Felpita camina por un pueblo de Jujuy con el Cerro de los Siete Colores detrás"></div>
   </div>
 </header>
 
@@ -172,7 +174,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
     <div class="sec-head">
       <p class="eyebrow">La idea</p>
       <h2>La Navidad es buena para estar cerca</h2>
-      <p class="lede">Felpita prepara un bolso con una bufanda, galletitas, una foto y un regalo. Sale de su casa en un barrio argentino y viaja en tren, cruza la ciudad, sigue por la ruta bajo la lluvia y llega a la nieve, donde su abuela vive en una cabaña.</p>
+      <p class="lede">Felpita prepara un bolso con una bufanda, galletitas, una foto y un regalo. Sale de su casa en un barrio argentino, toma el tren, cruza el país hacia el norte, de las sierras de Córdoba a los cerros de Jujuy, y llega a la nieve, donde su abuela vive en una cabaña.</p>
       <p class="lede">El viaje es todo lo que somos capaces de hacer para estar con quienes queremos. Lo importante no es la aventura, es el encuentro: el regalo, el abrazo, el pañuelo cuando la abuela se emociona y la Navidad compartida.</p>
     </div>
     <div class="side">
@@ -197,8 +199,8 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
     </div>
     <div class="rules">
       <div><h3>Fotografía real</h3><p>Los lugares parecen filmados con cámara de cine: luz creíble, materiales y arquitectura auténticos. No es una película animada ni un cuento infantil.</p></div>
-      <div><h3>Argentina se siente argentina</h3><p>Barrio, veredas, tren y ciudad reconocibles, sin ser una postal literal. La nieve aparece recién al final del viaje, nunca en el barrio.</p></div>
-      <div><h3>La luz cuenta el viaje</h3><p>Calidez en la casa, variedad en el camino, dureza en la ruta y el contraste final entre el frío de afuera y el interior cálido de la abuela. Navidad presente, sin saturar.</p></div>
+      <div><h3>Argentina se siente argentina</h3><p>Barrio, veredas y tren reconocibles, y en el camino los paisajes más típicos del país: las sierras de Córdoba y los cerros de Jujuy. La nieve aparece recién al final del viaje.</p></div>
+      <div><h3>La luz cuenta el viaje</h3><p>Calidez en la casa, variedad en el camino, cansancio en las sierras y el contraste final entre el frío de afuera y el interior cálido de la abuela. Navidad presente, sin saturar.</p></div>
     </div>
     <div class="route" aria-label="Recorrido de cálido a frío">
       <div class="route-bar"></div>
@@ -206,8 +208,8 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
         <li>Casa<small>cálido</small></li>
         <li>Barrio<small>templado</small></li>
         <li>Tren<small>urbano</small></li>
-        <li>Ciudad<small>urbano</small></li>
-        <li>Ruta<small>lluvia, viento</small></li>
+        <li>Córdoba<small>sierras</small></li>
+        <li>Jujuy<small>cerros</small></li>
         <li>Polo Norte<small>nieve</small></li>
         <li>Cabaña<small>cálido adentro</small></li>
       </ol>
@@ -243,11 +245,11 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
         </div>
       </article>
       <article class="card">
-        <img src="img/kf-08.jpg" alt="Primera exploración de la abuela osa en la mesa con Felpita" style="aspect-ratio:4/5;object-fit:cover;object-position:68% 50%">
+        <img src="img/kf-08.jpg" alt="Primera exploración de la abuela osa en la mesa con Felpita" style="aspect-ratio:4/5;object-fit:cover;object-position:62% 50%">
         <div class="card-body">
           <span class="tag warm">Abuela · diseño a definir</span>
           <p>Una osa, no una persona. Tiene que comunicar edad, ternura y parentesco sin salirse del diseño de Felpita.</p>
-          <p class="avoid">Exploración inicial: anteojos, rodete y chal tejido. El vestuario acompaña, no la convierte en caricatura.</p>
+          <p class="avoid">Exploración actual: anteojos, pelaje un poco más gris y chal tejido. El vestuario acompaña, no la convierte en caricatura.</p>
         </div>
       </article>
     </div>
@@ -260,6 +262,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
       <p class="eyebrow">Storyboard</p>
       <h2>Ocho momentos y un cierre</h2>
       <p class="lede">Cada key frame resume un tramo del viaje, no un plano. Los tiempos son una primera propuesta para conversar el ritmo.</p>
+      <p class="change"><b>Nuevo en v2</b> Entre Buenos Aires y el Polo Norte el viaje pasa por las sierras de Córdoba y los cerros de Jujuy, y el tren queda en la estación Avellaneda.</p>
     </div>
     <div class="sb-tools">
       <p class="note"><b>Storyboard exploratorio de la narrativa.</b> Estas imágenes ordenan el recorrido y los momentos de la historia, pero todavía no sostienen un estilo: por momentos se ven como película animada y el oso aún no es el oficial. La próxima versión lleva todo al mundo real con el Felpita oficial.</p>
@@ -271,63 +274,64 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
 
     <div class="frames" id="frames">
       <article class="frame">
-        <div class="shot" style="--fx:.48"><img src="img/kf-01.jpg" alt="Felpita prepara el bolso en el living de su casa"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.45"><img src="img/kf-01.jpg" alt="Felpita guarda la bufanda en el bolso, con galletitas, una foto familiar y el regalo para la abuela"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">01</span><h3>Preparativos</h3><span class="tc">0:00–0:08</span></div>
-          <p>En su casa de barrio, Felpita guarda en el bolso la bufanda, las galletitas, la foto y el regalo. Presentamos al personaje, su hogar y la intención del viaje.</p>
-          <div class="beats"><span>bufanda</span><span>galletitas</span><span>foto</span><span>regalo</span></div>
+          <div class="meta-top"><span class="num">01</span><h3>Preparativos</h3><span class="tc">0:00–0:07</span></div>
+          <p>En su casa de barrio, Felpita guarda en el bolso la bufanda, las galletitas, la foto y el regalo para la abuela. Presentamos al personaje, su hogar y la intención del viaje.</p>
+          <div class="beats"><span>bufanda</span><span>galletitas</span><span>foto</span><span>regalo «ABUELA»</span></div>
         </div>
       </article>
 
       <article class="frame">
-        <div class="shot" style="--fx:.47"><img src="img/kf-02.jpg" alt="Felpita sale de su casa con el bolso a la vereda"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.5"><img src="img/kf-02.jpg" alt="Felpita sale de su casa con el bolso a la vereda de noche"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">02</span><h3>La partida</h3><span class="tc">0:08–0:13</span></div>
+          <div class="meta-top"><span class="num">02</span><h3>La partida</h3><span class="tc">0:07–0:12</span></div>
           <p>Sale de su casa con el bolso. La vereda, la reja y los árboles dejan claro que la historia empieza en Argentina.</p>
-          <div class="talk"><b>Para conversar</b>¿A qué hora sale? Hoy los frames van de noche a tarde y otra vez a noche. Propuesta: salir de mañana, ciudad a la tarde, ruta al atardecer y llegada de noche.</div>
+          <div class="talk"><b>Para conversar</b>Sale de noche y en el frame siguiente la estación es de día. ¿Sale al amanecer, o el viaje arranca a la mañana siguiente?</div>
         </div>
       </article>
 
       <article class="frame">
-        <div class="shot" style="--fx:.32"><img src="img/kf-03.jpg" alt="Felpita sentado en un tren metropolitano con el bolso"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.44"><img src="img/kf-03.jpg" alt="Felpita camina por el andén de la estación Avellaneda, Línea Roca, junto al tren"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">03</span><h3>El tren</h3><span class="tc">0:13–0:19</span></div>
-          <p>Viaja en un tren metropolitano. La gente y la vida cotidiana a su alrededor hacen que el osito se vea todavía más extraordinario.</p>
-          <div class="talk"><b>Para conversar</b>¿Línea y estación reales con cartel, o un tren reconocible sin nombres?</div>
+          <div class="meta-top"><span class="num">03</span><h3>El tren</h3><span class="tc">0:12–0:18</span></div>
+          <p>Estación Avellaneda, Línea Roca. Felpita sube al tren entre la gente que va y viene; la vida cotidiana a su alrededor lo hace ver todavía más extraordinario.</p>
+          <div class="beats"><span>estación Avellaneda</span><span>Línea Roca</span></div>
         </div>
       </article>
 
       <article class="frame">
-        <div class="shot" style="--fx:.41"><img src="img/kf-04.jpg" alt="Felpita camina por una avenida de Buenos Aires con el Obelisco al fondo"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.36"><img src="img/kf-04.jpg" alt="Felpita descansa cansado junto a una carpa en las sierras de Córdoba al atardecer"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">04</span><h3>La ciudad</h3><span class="tc">0:19–0:24</span></div>
-          <p>Cruza Buenos Aires con referencias reconocibles y una sensación creciente de aventura.</p>
-          <div class="talk"><b>Para conversar</b>Con el Obelisco alcanza para ubicar la ciudad; el cartel "Buenos Aires" en la pared se puede sacar.</div>
+          <div class="meta-top"><span class="num">04</span><h3>Las sierras de Córdoba</h3><span class="tc">0:18–0:25</span></div>
+          <p>El viaje sigue hacia el norte. Al atardecer, en un camping de las sierras, Felpita se detiene cansado. El camino empieza a exigirle esfuerzo.</p>
+          <div class="beats"><span>camping</span><span>cansancio</span><span>atardecer</span></div>
         </div>
       </article>
 
       <article class="frame">
-        <div class="shot" style="--fx:.5"><img src="img/kf-05.jpg" alt="Felpita camina por la banquina de una ruta bajo la lluvia"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.37"><img src="img/kf-05.jpg" alt="Felpita camina por una calle de piedra de Purmamarca con el Cerro de los Siete Colores detrás"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">05</span><h3>La ruta</h3><span class="tc">0:24–0:30</span></div>
-          <p>Sigue bajo la lluvia y el viento, cansado, con su bolso. El camino empieza a exigirle esfuerzo.</p>
-          <div class="talk"><b>Para conversar</b>Acá el bolso se volvió mochila: tiene que ser el mismo en todo el viaje. Y el gesto debería mostrar cansancio, no una sonrisa.</div>
+          <div class="meta-top"><span class="num">05</span><h3>Jujuy</h3><span class="tc">0:25–0:31</span></div>
+          <p>Un nuevo día, más al norte. Felpita retoma la marcha por un pueblo de piedra y adobe, con el Cerro de los Siete Colores detrás.</p>
+          <div class="beats"><span>Cerro de los Siete Colores</span><span>Purmamarca</span></div>
         </div>
       </article>
 
       <article class="frame">
-        <div class="shot" style="--fx:.36"><img src="img/kf-06.jpg" alt="Felpita de espaldas en la nieve, a lo lejos una cabaña iluminada"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.45"><img src="img/kf-06.jpg" alt="Felpita avanza por la nieve en una tormenta, a lo lejos la cabaña y un cartel que dice Polo Norte"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">06</span><h3>El Polo Norte</h3><span class="tc">0:30–0:36</span></div>
-          <p>El paisaje cambia por completo. Felpita atraviesa la nieve y descubre una pequeña cabaña iluminada.</p>
-          <div class="beats"><span>primera nieve del viaje</span><span>huellas</span></div>
+          <div class="meta-top"><span class="num">06</span><h3>El Polo Norte</h3><span class="tc">0:31–0:37</span></div>
+          <p>El paisaje cambia por completo. Felpita avanza por la nieve, con viento y aurora en el cielo, y descubre a lo lejos la cabaña iluminada.</p>
+          <div class="beats"><span>primera nieve del viaje</span><span>huellas</span><span>cabaña</span></div>
+          <div class="talk"><b>Para conversar</b>¿El cartel "Polo Norte" suma o alcanza con el paisaje para entender dónde está?</div>
         </div>
       </article>
 
       <article class="frame">
-        <div class="shot" style="--fx:.5"><img src="img/kf-07.jpg" alt="La abuela osa abre la puerta y Felpita le da un regalo que dice ABUELA"><div class="crop"><span>9:16</span></div></div>
+        <div class="shot" style="--fx:.45"><img src="img/kf-07.jpg" alt="Felpita y la abuela osa se abrazan en la puerta de la cabaña con el regalo que dice ABUELA"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">07</span><h3>El reencuentro</h3><span class="tc">0:36–0:46</span></div>
+          <div class="meta-top"><span class="num">07</span><h3>El reencuentro</h3><span class="tc">0:37–0:47</span></div>
           <p>Golpea la puerta. La abuela abre, Felpita le entrega el regalo que dice «ABUELA» y se abrazan. La abuela se emociona y Felpita le ofrece un pañuelo. Es el momento más importante de la película.</p>
           <div class="beats"><span>golpe a la puerta</span><span>regalo «ABUELA»</span><span>abrazo</span><span>pañuelo</span></div>
           <div class="talk"><b>Para conversar</b>El Bear System incluye pañuelos entre los productos de Felpita. Si es así, este gesto puede ser el momento de producto. ¿Se ve la marca o queda sugerido?</div>
@@ -337,7 +341,7 @@ footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--mute
       <article class="frame">
         <div class="shot" style="--fx:.5"><img src="img/kf-08.jpg" alt="Felpita y su abuela comparten la mesa navideña en la cabaña"><div class="crop"><span>9:16</span></div></div>
         <div class="meta">
-          <div class="meta-top"><span class="num">08</span><h3>Navidad juntos</h3><span class="tc">0:46–0:52</span></div>
+          <div class="meta-top"><span class="num">08</span><h3>Navidad juntos</h3><span class="tc">0:47–0:52</span></div>
           <p>Abuela y nieto comparten la mesa en el interior cálido de la cabaña. El momento prepara el cierre.</p>
         </div>
       </article>
