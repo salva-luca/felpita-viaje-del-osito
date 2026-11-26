@@ -1,49 +1,124 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow">
-<title>Felpita · Proceso</title>
+<title>El viaje del Osito · Felpita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f5f2;--fg:#1d1d1f;--mut:#6e6e73;--card:#fff;--line:#e4e2dd;--acc:#1f3c8a}
-@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#f2f2f2;--mut:#9a9a9f;--card:#1c1c1c;--line:#2c2c2c;--acc:#8fb0ff}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,system-ui,"Segoe UI",sans-serif}
-main{max-width:1280px;margin:0 auto;padding:32px 16px 96px}
-.eyebrow{color:var(--acc);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:13px;margin:0}
-h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:6px 0 8px}h2{font-size:22px;margin:56px 0 6px}
-.sub{color:var(--mut);margin:0 0 18px;max-width:760px}
-.hero{margin:24px 0 0;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 10px 40px rgba(0,0,0,.18)}
-.hero video{display:block;width:100%;aspect-ratio:16/9}
-.hero-cap{color:var(--mut);font-size:14px;margin:10px 2px 0}
-.pasos{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
-.pasos li{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
-.pasos .n{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:14px;background:var(--acc);color:#fff}
-.pasos li.next .n{background:transparent;color:var(--acc);border:2px solid var(--acc)}
-.pasos p{margin:2px 0 0;color:var(--mut);font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.card{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.card img,.card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#ddd}
-.fichas .card img{object-fit:contain;background:#ececea}
-.card img{cursor:zoom-in}
-figcaption{padding:12px 14px}figcaption p{margin:4px 0 0;color:var(--mut);font-size:14px}.num{color:var(--mut);margin-right:4px}
-footer{margin-top:64px;color:var(--mut);font-size:13px}
-#lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:9;cursor:zoom-out}
-#lb img{max-width:96vw;max-height:94vh}#lb.on{display:flex}
-</style></head><body><main>
-<p class="eyebrow">Felpita · Campaña de Navidad</p>
+:root{--noche:#0c1640;--azul:#1f3c8a;--ola:#59a7e6;--marfil:#f6f2ea;--bufanda:#d9c4a1;--brasa:#2b1720;--texto:#e9edf8;--suave:#a9b4d6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--noche);color:var(--texto);font:17px/1.6 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.02em;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--ola);outline-offset:3px;border-radius:6px}
+/* HERO */
+.hero{position:relative;min-height:100vh;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%,#24408f 0%,var(--noche) 60%)}
+#nieve{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;padding-top:clamp(56px,10vh,110px);padding-bottom:72px}
+.marca{color:var(--bufanda);font-weight:600;margin:0 0 14px;font-size:16px}
+.hero h1{font-size:clamp(52px,10.5vw,148px);line-height:.9;color:var(--marfil);max-width:11ch}
+.bajada{max-width:56ch;color:var(--suave);font-size:19px;margin:22px 0 40px}
+.pantalla{border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(3,8,30,.65),0 0 0 1px rgba(255,255,255,.06)}
+.pantalla video{display:block;width:100%;aspect-ratio:16/9}
+.bufanda{height:10px;background:repeating-linear-gradient(90deg,var(--azul) 0 44px,var(--bufanda) 44px 88px)}
+.nota{color:var(--suave);font-size:14px;margin:12px 4px 0}
+/* SECCIONES */
+section{padding:110px 0}
+.titulo{font-size:clamp(34px,5vw,60px);line-height:1;color:var(--marfil);max-width:16ch}
+.intro{color:var(--suave);max-width:60ch;margin:16px 0 44px}
+/* PERSONAJES */
+.personajes{background:#101d52}
+.switch{display:inline-flex;background:rgba(255,255,255,.08);border-radius:999px;padding:5px;margin-bottom:22px}
+.switch button{font:600 16px Figtree,sans-serif;color:var(--texto);background:none;border:0;border-radius:999px;padding:10px 22px;cursor:pointer}
+.switch button[aria-pressed=true]{background:var(--marfil);color:var(--noche)}
+.turn{position:relative;border-radius:22px;overflow:hidden;background:#e9e9ea}
+.turn img{display:block;width:100%;transition:opacity .45s ease}
+.turn img.frio{position:absolute;inset:0}
+.turn[data-modo=calido] img.frio{opacity:0}
+.regla{min-height:3.2em;color:var(--suave);margin:14px 2px 0}
+.piezas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+.pz{margin:0}.pz img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#e9e9ea;border-radius:16px;display:block}
+.pz figcaption{padding:12px 2px}.pz strong{display:block;color:var(--marfil)}.pz span{color:var(--suave);font-size:15px}
+/* VIAJE */
+.viaje{background:linear-gradient(180deg,#3a1d22 0%,#4a2a2c 12%,#3b2a3d 38%,#1d2457 62%,var(--noche) 82%)}
+.ruta{list-style:none;margin:0;padding:0;position:relative}
+.ruta::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:3px dashed rgba(246,242,234,.35);transform:translateX(-50%)}
+.parada{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin:0 0 84px}
+.parada .punto{position:absolute;left:50%;top:50%;width:18px;height:18px;border-radius:50%;background:var(--marfil);transform:translate(-50%,-50%);box-shadow:0 0 0 6px rgba(246,242,234,.15)}
+.parada.der .media{order:2}
+.media{position:relative;padding:0;border:0;border-radius:18px;overflow:hidden;cursor:pointer;background:#000;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.media img,.media video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.play{position:absolute;right:14px;bottom:14px;width:52px;height:52px;border-radius:50%;background:rgba(246,242,234,.92)}
+.play::after{content:"";position:absolute;left:21px;top:16px;border-left:15px solid var(--noche);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.media.on .play{display:none}
+.lugar{color:var(--bufanda);font-weight:600;margin:0 0 6px;font-size:15px}
+.txt h3{font-size:clamp(28px,3.4vw,44px);color:var(--marfil);line-height:1.05}
+.txt p:last-child{color:var(--suave);max-width:38ch;margin:10px 0 0}
+.parada.der .txt{text-align:right}.parada.der .txt p:last-child{margin-left:auto}
+/* PROCESO */
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:p}
+.pasos li{padding:0 18px 0 0;border-top:3px solid rgba(246,242,234,.25);padding-top:18px}
+.pasos .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:40px;color:rgba(246,242,234,.35);display:block;line-height:1}
+.pasos strong{display:block;color:var(--marfil);margin:10px 0 4px;font-size:19px}.pasos span:last-child{color:var(--suave);font-size:15px}
+.pasos li.hoy{border-top-color:var(--ola)}.pasos li.hoy .n{color:var(--ola)}
+footer{padding:40px 0 60px;color:var(--suave);font-size:14px}
+@media (max-width:820px){
+ .ruta::before{left:9px}.parada{grid-template-columns:1fr;gap:18px;padding-left:36px}
+ .parada .punto{left:9px;top:24px}.parada.der .media{order:0}.parada.der .txt{text-align:left}.parada.der .txt p:last-child{margin-left:0}
+ .pasos{grid-template-columns:1fr;gap:22px}section{padding:80px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.turn img{transition:none}}
+</style></head><body>
+<header class="hero"><canvas id="nieve" aria-hidden="true"></canvas><div class="wrap">
+<p class="marca">Felpita · Navidad</p>
 <h1>El viaje del Osito</h1>
-<p class="sub">Primera edición completa y el proceso que la construyó: los personajes, los doce planos de la historia y cada plano animado.</p>
-<div class="hero"><video src="edicion.mp4" poster="img/poster.jpg" controls playsinline preload="metadata"></video></div>
-<p class="hero-cap">Primera edición · 44 s · música de referencia, no definitiva.</p>
-<h2>El proceso</h2><p class="sub">De los personajes a la edición.</p>
-<ol class="pasos"><li class="done"><span class="n">1</span><div><strong>Personajes</strong><p>Felpita en sus dos versiones, el bolso, la abuela y la escala.</p></div></li><li class="done"><span class="n">2</span><div><strong>Los 12 planos</strong><p>Un fotograma final por cada momento de la historia.</p></div></li><li class="done"><span class="n">3</span><div><strong>Animación</strong><p>Cada plano en movimiento.</p></div></li><li class="done"><span class="n">4</span><div><strong>Primera edición</strong><p>Todo junto con música de referencia.</p></div></li><li class="next"><span class="n">5</span><div><strong>Aprobación</strong><p>En revisión: aprobación y comentarios de Mundana.</p></div></li></ol>
-<h2>Personajes</h2><p class="sub">Todo parte del Felpita Bear System: proporciones, mirada, hocico corto, escala de 60 cm. Estas fichas fijan al personaje para que sea el mismo en cada plano.</p>
-<div class="grid fichas"><figure class="card"><img src="img/ficha-0.jpg" alt="Felpita · frío" loading="lazy"><figcaption><strong>Felpita · frío</strong><p>Con bufanda: solo afuera, en el Polo Norte.</p></figcaption></figure><figure class="card"><img src="img/ficha-1.jpg" alt="Felpita · cálido" loading="lazy"><figcaption><strong>Felpita · cálido</strong><p>Sin bufanda: en casa, en la Argentina de verano y adentro de lo de la abuela.</p></figcaption></figure><figure class="card"><img src="img/ficha-2.jpg" alt="Felpita · cara" loading="lazy"><figcaption><strong>Felpita · cara</strong><p>La mirada, el hocico corto y la sonrisa contenida del Bear System.</p></figcaption></figure><figure class="card"><img src="img/ficha-3.jpg" alt="El bolso" loading="lazy"><figcaption><strong>El bolso</strong><p>Bolso azul marino con el logo bordado. Lo acompaña en todo el viaje.</p></figcaption></figure><figure class="card"><img src="img/ficha-4.jpg" alt="La abuela" loading="lazy"><figcaption><strong>La abuela</strong><p>De la misma familia que Felpita: anteojos con cadenita, saco bordó y chal tejido.</p></figcaption></figure><figure class="card"><img src="img/ficha-5.jpg" alt="Escala" loading="lazy"><figcaption><strong>Escala</strong><p>Felpita mide 60 cm; la abuela, 1 metro.</p></figcaption></figure></div>
-<h2>Los 12 planos</h2><p class="sub">Un fotograma final por cada momento del viaje, con encuadres variados como en una película.</p>
-<div class="grid"><figure class="card"><img src="img/plano-01.jpg" alt="Preparativos" loading="lazy"><figcaption><strong><span class="num">01</span> Preparativos</strong><p>Plano medio en su cuarto, de noche. Guarda la bufanda en el bolso: todavía no la necesita.</p></figcaption></figure><figure class="card"><img src="img/plano-02.jpg" alt="La partida" loading="lazy"><figcaption><strong><span class="num">02</span> La partida</strong><p>Detalle: su pata cierra la reja de la casa.</p></figcaption></figure><figure class="card"><img src="img/plano-03.jpg" alt="Buenos Aires" loading="lazy"><figcaption><strong><span class="num">03</span> Buenos Aires</strong><p>La 9 de Julio y el Obelisco al atardecer.</p></figcaption></figure><figure class="card"><img src="img/plano-04.jpg" alt="La estación" loading="lazy"><figcaption><strong><span class="num">04</span> La estación</strong><p>Desde adentro del vagón: sube al tren en Avellaneda.</p></figcaption></figure><figure class="card"><img src="img/plano-05.jpg" alt="Córdoba" loading="lazy"><figcaption><strong><span class="num">05</span> Córdoba</strong><p>Atardecer en las sierras: se queda dormido contra una roca.</p></figcaption></figure><figure class="card"><img src="img/plano-06.jpg" alt="La cordillera" loading="lazy"><figcaption><strong><span class="num">06</span> La cordillera</strong><p>Plano aéreo: un osito chiquito frente a la cordillera y el Aconcagua.</p></figcaption></figure><figure class="card"><img src="img/plano-07.jpg" alt="El norte" loading="lazy"><figcaption><strong><span class="num">07</span> El norte</strong><p>Primer plano en Purmamarca, con el Cerro de los Siete Colores.</p></figcaption></figure><figure class="card"><img src="img/plano-08.jpg" alt="El avión" loading="lazy"><figcaption><strong><span class="num">08</span> El avión</strong><p>Se recuesta y mira las nubes: el salto hacia el Polo Norte.</p></figcaption></figure><figure class="card"><img src="img/plano-09.jpg" alt="El Polo Norte" loading="lazy"><figcaption><strong><span class="num">09</span> El Polo Norte</strong><p>Llega el frío: se pone la bufanda bajo la aurora.</p></figcaption></figure><figure class="card"><img src="img/plano-10.jpg" alt="La cabaña" loading="lazy"><figcaption><strong><span class="num">10</span> La cabaña</strong><p>Va dejando sus huellas en la nieve hasta la cabaña.</p></figcaption></figure><figure class="card"><img src="img/plano-11.jpg" alt="El reencuentro" loading="lazy"><figcaption><strong><span class="num">11</span> El reencuentro</strong><p>Se abre la puerta: la abuela. El regalo, la emoción, el abrazo.</p></figcaption></figure><figure class="card"><img src="img/plano-12.jpg" alt="Navidad juntos" loading="lazy"><figcaption><strong><span class="num">12</span> Navidad juntos</strong><p>La cena de Navidad: charlan junto al fuego.</p></figcaption></figure></div>
-<h2>Animación</h2><p class="sub">Cada plano en movimiento. En la edición se usa la mejor parte de cada uno.</p>
-<div class="grid"><figure class="card"><video src="clips/01.mp4" poster="img/plano-01.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">01</span> Preparativos</strong></figcaption></figure><figure class="card"><video src="clips/02.mp4" poster="img/plano-02.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">02</span> La partida</strong></figcaption></figure><figure class="card"><video src="clips/03.mp4" poster="img/plano-03.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">03</span> Buenos Aires</strong></figcaption></figure><figure class="card"><video src="clips/04.mp4" poster="img/plano-04.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">04</span> La estación</strong></figcaption></figure><figure class="card"><video src="clips/05.mp4" poster="img/plano-05.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">05</span> Córdoba</strong></figcaption></figure><figure class="card"><video src="clips/06.mp4" poster="img/plano-06.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">06</span> La cordillera</strong></figcaption></figure><figure class="card"><video src="clips/07.mp4" poster="img/plano-07.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">07</span> El norte</strong></figcaption></figure><figure class="card"><video src="clips/08.mp4" poster="img/plano-08.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">08</span> El avión</strong></figcaption></figure><figure class="card"><video src="clips/09.mp4" poster="img/plano-09.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">09</span> El Polo Norte</strong></figcaption></figure><figure class="card"><video src="clips/10.mp4" poster="img/plano-10.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">10</span> La cabaña</strong></figcaption></figure><figure class="card"><video src="clips/11.mp4" poster="img/plano-11.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">11</span> El reencuentro</strong></figcaption></figure><figure class="card"><video src="clips/12.mp4" poster="img/plano-12.jpg" controls loop muted playsinline preload="none"></video><figcaption><strong><span class="num">12</span> Navidad juntos</strong></figcaption></figure></div>
-<footer>Felpita · El viaje del Osito · Documento de trabajo.</footer>
-</main><div id="lb"><img alt=""></div>
+<p class="bajada">Un osito de 60 cm cruza la Argentina para pasar la Navidad con su abuela en el Polo Norte. Esta es la primera edición completa y cómo se construyó.</p>
+<div class="pantalla"><video src="edicion.mp4" poster="img/poster.jpg" controls playsinline preload="metadata"></video><div class="bufanda"></div></div>
+<p class="nota">Primera edición, 44 segundos. Música de referencia, no definitiva.</p>
+</div></header>
+
+<section class="personajes"><div class="wrap">
+<h2 class="titulo">El mismo osito en cada plano</h2>
+<p class="intro">Todo parte del Felpita Bear System: cabeza grande, hocico corto, ojos chicos y oscuros, pies grandes, 60 cm de alto. Estas fichas fijan al personaje para que no cambie de un plano a otro.</p>
+<div class="switch" role="group" aria-label="Versión de Felpita"><button type="button" data-modo="calido" aria-pressed="true">Cálido</button><button type="button" data-modo="frio" aria-pressed="false">Frío</button></div>
+<div class="turn" data-modo="calido"><img class="calido" src="img/ficha-calido.jpg" alt="Felpita sin bufanda, de frente, de tres cuartos, de perfil y de espalda"><img class="frio" src="img/ficha-frio.jpg" alt="Felpita con bufanda, de frente, de tres cuartos, de perfil y de espalda"></div>
+<p class="regla" aria-live="polite">Sin bufanda: en casa, en la Argentina de verano y adentro de lo de la abuela.</p>
+<div class="piezas"><figure class="pz"><img src="img/ficha-2.jpg" alt="Felpita · cara" loading="lazy"><figcaption><strong>Felpita · cara</strong><span>La mirada, el hocico corto y la sonrisa contenida del Bear System.</span></figcaption></figure><figure class="pz"><img src="img/ficha-3.jpg" alt="El bolso" loading="lazy"><figcaption><strong>El bolso</strong><span>Bolso azul marino con el logo bordado. Lo acompaña en todo el viaje.</span></figcaption></figure><figure class="pz"><img src="img/ficha-4.jpg" alt="La abuela" loading="lazy"><figcaption><strong>La abuela</strong><span>De la misma familia que Felpita: anteojos con cadenita, saco bordó y chal tejido.</span></figcaption></figure><figure class="pz"><img src="img/ficha-5.jpg" alt="Escala" loading="lazy"><figcaption><strong>Escala</strong><span>Felpita mide 60 cm; la abuela, 1 metro.</span></figcaption></figure></div>
+</div></section>
+
+<section class="viaje"><div class="wrap">
+<h2 class="titulo">De Buenos Aires al Polo Norte</h2>
+<p class="intro">Los doce planos de la historia, en orden. Tocá cualquiera para verlo en movimiento.</p>
+<ol class="ruta"><li class="parada izq"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/01.mp4" aria-label="Reproducir el plano 1: Preparativos"><img src="img/plano-01.jpg" alt="Preparativos" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">01 · Buenos Aires</p><h3>Preparativos</h3><p>Plano medio en su cuarto, de noche. Guarda la bufanda en el bolso: todavía no la necesita.</p></div></li><li class="parada der"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/02.mp4" aria-label="Reproducir el plano 2: La partida"><img src="img/plano-02.jpg" alt="La partida" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">02 · Buenos Aires</p><h3>La partida</h3><p>Detalle: su pata cierra la reja de la casa.</p></div></li><li class="parada izq"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/03.mp4" aria-label="Reproducir el plano 3: Buenos Aires"><img src="img/plano-03.jpg" alt="Buenos Aires" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">03 · Obelisco</p><h3>Buenos Aires</h3><p>La 9 de Julio y el Obelisco al atardecer.</p></div></li><li class="parada der"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/04.mp4" aria-label="Reproducir el plano 4: La estación"><img src="img/plano-04.jpg" alt="La estación" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">04 · Avellaneda</p><h3>La estación</h3><p>Desde adentro del vagón: sube al tren en Avellaneda.</p></div></li><li class="parada izq"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/05.mp4" aria-label="Reproducir el plano 5: Córdoba"><img src="img/plano-05.jpg" alt="Córdoba" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">05 · Sierras de Córdoba</p><h3>Córdoba</h3><p>Atardecer en las sierras: se queda dormido contra una roca.</p></div></li><li class="parada der"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/06.mp4" aria-label="Reproducir el plano 6: La cordillera"><img src="img/plano-06.jpg" alt="La cordillera" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">06 · Mendoza</p><h3>La cordillera</h3><p>Plano aéreo: un osito chiquito frente a la cordillera y el Aconcagua.</p></div></li><li class="parada izq"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/07.mp4" aria-label="Reproducir el plano 7: El norte"><img src="img/plano-07.jpg" alt="El norte" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">07 · Purmamarca</p><h3>El norte</h3><p>Primer plano en Purmamarca, con el Cerro de los Siete Colores.</p></div></li><li class="parada der"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/08.mp4" aria-label="Reproducir el plano 8: El avión"><img src="img/plano-08.jpg" alt="El avión" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">08 · En vuelo</p><h3>El avión</h3><p>Se recuesta y mira las nubes: el salto hacia el Polo Norte.</p></div></li><li class="parada izq"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/09.mp4" aria-label="Reproducir el plano 9: El Polo Norte"><img src="img/plano-09.jpg" alt="El Polo Norte" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">09 · Polo Norte</p><h3>El Polo Norte</h3><p>Llega el frío: se pone la bufanda bajo la aurora.</p></div></li><li class="parada der"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/10.mp4" aria-label="Reproducir el plano 10: La cabaña"><img src="img/plano-10.jpg" alt="La cabaña" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">10 · Polo Norte</p><h3>La cabaña</h3><p>Va dejando sus huellas en la nieve hasta la cabaña.</p></div></li><li class="parada izq"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/11.mp4" aria-label="Reproducir el plano 11: El reencuentro"><img src="img/plano-11.jpg" alt="El reencuentro" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">11 · La cabaña</p><h3>El reencuentro</h3><p>Se abre la puerta: la abuela. El regalo, la emoción, el abrazo.</p></div></li><li class="parada der"><span class="punto" aria-hidden="true"></span><button class="media" data-video="clips/12.mp4" aria-label="Reproducir el plano 12: Navidad juntos"><img src="img/plano-12.jpg" alt="Navidad juntos" loading="lazy"><span class="play" aria-hidden="true"></span></button><div class="txt"><p class="lugar">12 · La cabaña</p><h3>Navidad juntos</h3><p>La cena de Navidad: charlan junto al fuego.</p></div></li></ol>
+</div></section>
+
+<section><div class="wrap">
+<h2 class="titulo">Dónde estamos</h2>
+<p class="intro">Del personaje a la primera edición.</p>
+<ol class="pasos"><li class=""><span class="n">1</span><strong>Personajes</strong><span>Felpita en sus dos versiones, el bolso, la abuela y la escala.</span></li><li class=""><span class="n">2</span><strong>Los 12 planos</strong><span>Un fotograma final por cada momento de la historia.</span></li><li class=""><span class="n">3</span><strong>Animación</strong><span>Cada plano en movimiento.</span></li><li class=""><span class="n">4</span><strong>Primera edición</strong><span>Todo junto con música de referencia.</span></li><li class="hoy"><span class="n">5</span><strong>Aprobación</strong><span>En revisión: aprobación y comentarios de Mundana.</span></li></ol>
+</div></section>
+<footer><div class="wrap">Felpita · El viaje del Osito · Documento de trabajo</div></footer>
 <script>
-const lb=document.getElementById('lb'),li=lb.querySelector('img');
-document.querySelectorAll('.card img').forEach(i=>i.onclick=()=>{li.src=i.src;lb.classList.add('on')});
-lb.onclick=()=>lb.classList.remove('on');document.onkeydown=e=>{if(e.key==='Escape')lb.classList.remove('on')};
+// interruptor cálido / frío
+const turn=document.querySelector('.turn'),regla=document.querySelector('.regla');
+const textos={calido:'Sin bufanda: en casa, en la Argentina de verano y adentro de lo de la abuela.',frio:'Con bufanda: solo afuera, cuando llega al Polo Norte.'};
+document.querySelectorAll('.switch button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.switch button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  turn.dataset.modo=b.dataset.modo;regla.textContent=textos[b.dataset.modo];});
+// paradas: la foto se convierte en el clip
+document.querySelectorAll('.media').forEach(m=>m.addEventListener('click',()=>{
+  if(m.classList.contains('on'))return;
+  const v=document.createElement('video');v.src=m.dataset.video;v.muted=true;v.loop=true;v.playsInline=true;v.autoplay=true;v.controls=true;
+  v.poster=m.querySelector('img').src;m.querySelector('img').replaceWith(v);m.classList.add('on');v.play();}));
+// nieve en la portada
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const c=document.getElementById('nieve'),x=c.getContext('2d');let W,H,f=[];
+  function size(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio;
+    f=Array.from({length:Math.round(W*H/26000)},()=>({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*2+.6)*devicePixelRatio,s:Math.random()*.6+.25,d:Math.random()*Math.PI*2}));}
+  size();addEventListener('resize',size);
+  (function loop(){x.clearRect(0,0,W,H);x.fillStyle='rgba(246,242,234,.8)';
+    for(const p of f){p.y+=p.s*devicePixelRatio;p.d+=.01;p.x+=Math.sin(p.d)*.3*devicePixelRatio;if(p.y>H){p.y=-5;p.x=Math.random()*W;}
+      x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
+    requestAnimationFrame(loop);})();
+})();
 </script></body></html>
